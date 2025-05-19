@@ -1,9 +1,17 @@
 [server]
-headless = true
-address = "localhost"
-port = 5000
+port = 8501
+address = "0.0.0.0"
+
+[browser]
+serverAddress = "0.0.0.0"
+serverPort = 8501
 
 [theme]
+primaryColor = "#E694FF"
+backgroundColor = "#00172B"
+secondaryBackgroundColor = "#0083B8"
+textColor = "#FFFFFF"
+font = "sans serif"
 primaryColor = "#0066cc"
 backgroundColor = "#ffffff"
 secondaryBackgroundColor = "#f0f2f6"
