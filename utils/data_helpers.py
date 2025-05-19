@@ -4,11 +4,39 @@ from models.fair_model import FAIRModel, TEFInput, VulnerabilityInput, LossInput
 
 def load_sample_scenarios():
     """
-    Load a set of predefined sample risk scenarios.
-    
-    Returns:
-        Dictionary of sample scenarios
+    Load predefined sample risk scenarios for demonstration
     """
+    return {
+        "Data Breach Scenario": {
+            "name": "Data Breach Scenario",  # Added name field
+            "description": "Analysis of potential customer data breach impact",
+            "loss_event_frequency": {
+                "min": 0.1,
+                "max": 2,
+                "most_likely": 0.5
+            },
+            "primary_loss_magnitude": {
+                "min": 100000,
+                "max": 1000000,
+                "most_likely": 400000
+            }
+        },
+        "Ransomware Attack": {
+            "name": "Ransomware Attack",  # Added name field
+            "description": "Impact assessment of potential ransomware attack",
+            "loss_event_frequency": {
+                "min": 0.2,
+                "max": 3,
+                "most_likely": 1
+            },
+            "primary_loss_magnitude": {
+                "min": 50000,
+                "max": 500000,
+                "most_likely": 200000
+            }
+        }
+    }
+    
     # Sample scenario 1: Data Breach
     data_breach = FAIRModel(
         name="Data Breach Scenario",

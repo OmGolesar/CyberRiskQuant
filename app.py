@@ -47,9 +47,11 @@ def main():
     
     # Load sample scenarios
     sample_scenarios = load_sample_scenarios()
-    selected_scenario = st.selectbox("Select a sample scenario:", list(sample_scenarios.keys()))
+    selected_scenario = st.selectbox("Select a sample scenario:", 
+                                   list(sample_scenarios.keys()),
+                                   key="scenario_selector")  # Added unique key
     
-    if st.button("Analyze Sample Scenario"):
+    if st.button("Analyze Sample Scenario", key="analyze_button"):  # Added unique key
         st.session_state["selected_sample"] = selected_scenario
         st.switch_page("pages/1_Risk_Analysis.py")
     
